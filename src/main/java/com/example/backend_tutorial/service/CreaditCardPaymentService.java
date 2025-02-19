@@ -3,7 +3,7 @@ package com.example.backend_tutorial.service;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("credit-card")
 @Primary
 public class CreaditCardPaymentService implements PaymentService {
     

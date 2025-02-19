@@ -8,6 +8,7 @@ public class BackendTutorialApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackendTutorialApplication.class, args);
+		System.out.println("Spring boot is runnung on localhost:3000");
 	}
 
 }

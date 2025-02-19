@@ -2,7 +2,7 @@ package com.example.backend_tutorial.service;
 
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("momo")
 public class MomoPaymentService implements PaymentService {
     
     @Override
