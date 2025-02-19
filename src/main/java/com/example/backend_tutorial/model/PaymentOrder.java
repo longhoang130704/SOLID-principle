@@ -23,7 +23,7 @@ import lombok.Setter;
 public class PaymentOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
@@ -40,6 +40,6 @@ public class PaymentOrder {
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @OneToOne(mappedBy = "payment", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "payment_id", cascade = CascadeType.ALL)
     private PaymentDetail paymentDetail;
 }
