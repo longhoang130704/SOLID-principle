@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.backend_tutorial.service.PaymentService;
+import com.example.backend_tutorial.service.TypeOfPayments.PaymentService;
 
 @Component
 public class PaymentFactory {
