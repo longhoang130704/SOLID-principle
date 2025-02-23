@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.example.backend_tutorial.model.Customer;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, String> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-    Optional<Customer> findById(Long id);
+    public Optional<Customer> findCustomerById(Long id);
     
 }

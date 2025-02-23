@@ -2,6 +2,8 @@ package com.example.backend_tutorial.model;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -41,5 +43,6 @@ public class PaymentOrder {
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @OneToOne(mappedBy = "payment_id", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private PaymentDetail paymentDetail;
 }

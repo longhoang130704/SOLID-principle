@@ -22,7 +22,7 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping("/")
+    @PostMapping
     public CustomerApiResponse createCustomer(@RequestBody CustomerApiRequest customerApiRequest) {
         return customerService.createCustomer(customerApiRequest);
     }
@@ -32,7 +32,7 @@ public class CustomerController {
         return customerService.findCustomerById(customerId);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<Customer> getAllCustomer() {
         return customerService.getAllCustomers();
     }

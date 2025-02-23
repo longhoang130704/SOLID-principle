@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.example.backend_tutorial.model.PaymentMethod;
 
 @Repository
-public interface PaymentMethodRepository extends JpaRepository<PaymentMethod, String>  {
+public interface PaymentMethodRepository extends JpaRepository<PaymentMethod, Long>  {
     public Optional<PaymentMethod> findMethodById(Long id);
 }

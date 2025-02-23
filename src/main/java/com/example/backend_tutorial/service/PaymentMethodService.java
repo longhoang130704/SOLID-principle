@@ -15,7 +15,7 @@ public class PaymentMethodService {
     @Autowired
     private PaymentMethodRepository paymentMethodRepository;
 
-    public List<PaymentMethod> getAllPaymentMethod() {
+    public List<PaymentMethod> getAllPaymentMethods() {
         return paymentMethodRepository.findAll();
     }
 
@@ -46,10 +46,15 @@ public class PaymentMethodService {
         }
     }
     
-    public void deletePaymentMethod(Long id) {
+    public String deletePaymentMethod(Long id) {
         PaymentMethod paymentMethod = paymentMethodRepository.findMethodById(id)
             .orElseThrow(() -> new RuntimeException("Not found PaymentMethod with id: " + id));
-        paymentMethodRepository.delete(paymentMethod);
+        try {
+            paymentMethodRepository.delete(paymentMethod);
+            return "Delete method id: " + id;
+        } catch (Exception e) {
+            throw new RuntimeException("Internal Server Error!");
+        }
     }
 
 }
