@@ -27,7 +27,7 @@ public class PaymentController {
 
     // method: credit-card, paypal, momo, vnpay
     @PostMapping("/{method}")
-    public String payWithCreaditCard(@PathVariable String  method, @RequestParam double amount) {
+    public String payWithChosenPayment(@PathVariable String  method, @RequestParam double amount) {
         PaymentService paymentService = paymentFactory.createPaymentService(method);
         paymentService.processPayment(amount); // sửa tham số truyền vào
         return "Pay With Cradit Card successfully!";
