@@ -14,18 +14,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Setter
 @Getter
 @Table(name = "payment_details")
 public class PaymentDetail {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;    
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "payment_id", nullable = false)

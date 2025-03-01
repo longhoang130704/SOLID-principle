@@ -1,11 +1,12 @@
 package com.example.backend_tutorial.service.TypeOfPayments;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.example.backend_tutorial.integration.momo.models.PaymentResponse;
 import com.example.backend_tutorial.integration.momo.shared.exception.MoMoException;
+import com.fasterxml.jackson.databind.JsonNode;
 
-@Component
+@Service
 public interface PaymentService {
     public PaymentResponse processPayment(
             String orderId,
@@ -16,5 +17,8 @@ public interface PaymentService {
             String notifyURL,
             String extraData) throws MoMoException;
 
+    public String processCallBack(JsonNode request);
+
     public void display();
+
 }

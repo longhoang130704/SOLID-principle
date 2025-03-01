@@ -3,7 +3,8 @@ package com.example.backend_tutorial;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example.backend_tutorial")
+// @SpringBootApplication
 public class BackendTutorialApplication {
 
 	public static void main(String[] args) {
