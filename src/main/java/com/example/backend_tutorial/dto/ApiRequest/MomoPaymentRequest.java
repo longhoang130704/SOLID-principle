@@ -12,6 +12,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MomoPaymentStructure {
-    private String momoId;
+public class MomoPaymentRequest {
+
+    private String orderId;
+    private String requestId;
+    private String amount;
+    private String orderInfo;
+    private String returnURL;
+    private String notifyURL;
+    private String extraData;
 }

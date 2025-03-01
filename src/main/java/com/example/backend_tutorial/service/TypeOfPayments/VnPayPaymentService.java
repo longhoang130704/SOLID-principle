@@ -1,13 +1,13 @@
-package com.example.backend_tutorial.service.TypeOfPayments;
+// package com.example.backend_tutorial.service.TypeOfPayments;
 
-import org.springframework.stereotype.Service;
+// import org.springframework.stereotype.Service;
 
-@Service("vnpay")
-public class VnPayPaymentService implements PaymentService {
+// @Service("vnpay")
+// public class VnPayPaymentService implements PaymentService {
 
-    @Override
-    public void processPayment(double amount) {
-        System.out.println("Vn Pay is called");
-    }
+//     @Override
+//     public void processPayment(double amount) {
+//         System.out.println("Vn Pay is called");
+//     }
     
-}
+// }
