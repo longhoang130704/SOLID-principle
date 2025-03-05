@@ -5,7 +5,9 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy file pom.xml và cài đặt dependencies trước
-COPY pom.xml mvnw .mvn/ ./
+
+COPY .mvn /app/.mvn
+COPY mvnw /app/mvnw
 
 RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
