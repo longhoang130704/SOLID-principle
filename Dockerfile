@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy file pom.xml và cài đặt dependencies trước
 COPY pom.xml mvnw .mvn/ ./
 
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 
 # Copy toàn bộ source code vào container
